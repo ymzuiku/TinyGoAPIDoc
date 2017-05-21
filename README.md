@@ -1,7 +1,7 @@
 # TinyGoAPIDoc
 ![](./golangDoc.png)
 
-# Add APIDoc.go in your project
+# Add TinyDoc.go in your project
 > Install
 
 # One line use

@@ -23,7 +23,7 @@ func APIDoc(w http.ResponseWriter, r *http.Request) {
 		showAPICell(w, v)
 	}
 	fmt.Fprintf(w, " . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n")
-	fmt.Fprintf(w, " \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
+	fmt.Fprintf(w, " \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
 }
 
 // showAPICell 用于打印一条API说明
