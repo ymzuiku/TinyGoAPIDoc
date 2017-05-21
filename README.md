@@ -1,5 +1,9 @@
 # TinyGoAPIDoc
 ![](./golangDoc.png)
+
+# Add APIDoc.go in your project
+> Install
+
 # One line use
 ```
 APIDocAddHandleFun(apiPerson, APIs{Info{title: "user get new money", url: "/api/person"}, nil})
