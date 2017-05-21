@@ -2,7 +2,7 @@
 ![](./golangDoc.png)
 
 # Install
-## Copy TinyDoc.go in your project
+> Copy TinyDoc.go in your project
 
 # One line use
 ```
