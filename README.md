@@ -1,4 +1,4 @@
-# TinyGolangAPIDoc
+# TinyGoAPIDoc
 ![](./golangDoc.png)
 # One line use
 ```
