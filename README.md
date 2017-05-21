@@ -28,6 +28,12 @@ APIDocAddOnes(APIs{Info{title: "user get new money", url: "/api/person"}, tags})
 # sample code 
 ```
 package main
+
+import (
+	"fmt"
+	"net/http"
+)
+
 func apiPerson(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "{name: redDog, age:20}")
 }
