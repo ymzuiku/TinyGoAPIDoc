@@ -1,4 +1,6 @@
 /.vscode/*
+/temp/*
+temp/
 .DS_Store
 npm-debug.log*
 debug
