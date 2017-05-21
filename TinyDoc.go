@@ -85,7 +85,7 @@ func (v *APIs) defAll() {
 
 func (info *Info) defTitle() {
 	if info.title == "" {
-		info.title = "该接口没有描述"
+		info.title = "Interfase title is empty"
 	}
 }
 func (info *Info) defMothd() {
