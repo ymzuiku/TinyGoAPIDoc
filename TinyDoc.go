@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// 用于计数API的编号
+// cell number
 var apiCellNum = 0
 var apiCells []APIs
 
@@ -13,7 +13,7 @@ func init() {
 	http.HandleFunc("/api/doc", APIDoc)
 }
 
-// APIDoc 创建API文档 默认绑定 /api
+// APIDoc handle
 func APIDoc(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "\n")
 	fmt.Fprintf(w, "  API Doc \n \n \n")
@@ -26,7 +26,6 @@ func APIDoc(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, " \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n")
 }
 
-// showAPICell 用于打印一条API说明
 func showAPICell(w http.ResponseWriter, v APIs) {
 	apiCellNum++
 	v.defAll()
@@ -46,26 +45,26 @@ func showAPICell(w http.ResponseWriter, v APIs) {
 	fmt.Fprintf(w, " | \n")
 }
 
-// APIDocAddOnes 增加一条API文档cell
+// APIDocAddOnes /api/doc add one cell
 func APIDocAddOnes(v APIs) string {
 	apiCells = append(apiCells, v)
 	return v.Info.url
 }
 
-// APIDocAddHandleFun 增加一条API文档cell, 并且调用http.Request
+// APIDocAddHandleFun And use http.HandleFunc()
 func APIDocAddHandleFun(handler func(http.ResponseWriter, *http.Request), v APIs) {
 	apiCells = append(apiCells, v)
 	http.HandleFunc(v.Info.url, handler)
 }
 
-// APITag API传递参数的说明
+// APITag -
 type APITag struct {
 	Name string
 	Type string
 	Tip  string
 }
 
-// Info API的基本信息
+// Info -
 type Info struct {
 	id    string
 	url   string
@@ -73,7 +72,7 @@ type Info struct {
 	mothd string
 }
 
-// APIs 用于创建APICell的参数
+// APIs -
 type APIs struct {
 	Info Info
 	Tags []APITag
